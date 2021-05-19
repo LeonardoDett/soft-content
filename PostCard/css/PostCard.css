@@ -1,0 +1,174 @@
+a{
+	text-decoration: none;
+}
+
+.post-cards-container {
+    display: flex;
+    justify-content: center;
+	justify-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+	width: 100%;
+    min-width: fit-content;
+	padding:10px;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    background-color: #FFF;
+    box-shadow: 0 5px 10px #AAA;
+    border-radius: 15px;
+    display: flex;
+    flex-direction:column;
+    height: max-content;
+    flex-basis: 700px;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 15px 10px;
+    min-width: 440px;
+}
+
+.post-card .post-body {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex: 1;
+}
+
+.post-card .post-header {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: flex-start;
+}
+
+.post-header .post-title {
+    font-size: 1.5em;
+    color: #b300fa;
+    font-weight: 700;
+}
+
+.post-body .post-profile {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-profile .post-profile-photo {
+    border-radius: 100%;
+    height: 8em;
+    width: 8em;
+    position: relative;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post-profile-photo span:first-child {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    font-size: 8.3em;
+    z-index: 0;
+}
+
+.post-profile-photo .his-hide {
+    display: none;
+    z-index: -1;
+}
+
+.post-profile-photo .profile-status {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 1em;
+    border-radius: 100%;
+    right: 0;
+    bottom: 15px;
+    z-index: 1;
+    box-shadow: 0 5px 10px #333;
+    font-size: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-profile-photo .his-online {
+    background-color: rgb(0, 170, 0);
+}
+.post-profile-photo .his-offline {
+    background-color: rgb(187, 187, 187);
+}
+.post-profile-photo .his-busy {
+    background-color: rgb(158, 0, 13);
+}
+
+.post-body .post-text {
+    height: 100%;
+    width: 70%;
+    color: #333;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.post-buttons-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    margin: auto;
+    height: fit-content;
+    padding: 15px 10px 10px 10px;
+}
+
+.post-button-soft {
+    border-radius: 10px;
+    border: 0.2px solid var(--button-soft-color);
+    padding: 10px 40px;
+    color: var(--button-soft-color);
+}
+
+.post-button-soft:hover {
+    color: white;
+    background-color: var(--button-soft-color);
+}
+
+.button-soft-default {
+    --button-soft-color: #b300fa;
+}
+
+@media screen and (max-width: 600px) {
+    .post-card .post-body {
+        flex-direction: column;
+    }
+    .post-body .post-profile{
+        order: 0;
+        width: 100%;
+        padding:20px;
+    }
+    .post-body .post-text{
+        order: 1;
+        width: 100%;
+        padding:20px;
+        text-align: center;
+    }
+    .post-card{
+        min-width: 0;
+    }
+    .post-card .post-header {
+        justify-content: center;
+        justify-items: center;
+    }
+
+}
