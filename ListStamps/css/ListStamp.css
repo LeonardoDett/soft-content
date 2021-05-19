@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+.list-stamps .stamp-item {
+    border-radius: 10px;
+    min-width: 50px;
+    min-height: 50px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    margin-left: -18px;
+    transition: transform 0.2s ease-in-out 0s, margin 0.2s ease-in 0s;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgb(0 0 0 / 50%) 0px 4px 16px;
+}
+
+.stamp-style-rounded .stamp-item {
+    border-radius: 100%;
+}
+
+.stamp-style-box .stamp-item {
+    border-radius: 10px;
+}
+
+.list-stamps {
+    margin: 20px 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    cursor: pointer;
+}
+
+.list-stamps .selected {
+    z-index: 1;
+    transform: translateY(-15px);
+}
+
+.list-event-space .selected {
+    margin-left: 10px;
+    margin-right: 28px;
+}
